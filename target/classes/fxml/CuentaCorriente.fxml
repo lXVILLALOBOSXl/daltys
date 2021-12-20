@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daltysfood.controller.CuentaCorrienteController">
+    <children>
+        <VBox prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <children>
+                                <ToolBar nodeOrientation="RIGHT_TO_LEFT" />
+                                <VBox alignment="TOP_RIGHT" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Button fx:id="buttonNuevoMovimiento" mnemonicParsing="false" onAction="#nuevoMovimiento" text="Nuevo Movimiento">
+                                            <VBox.margin>
+                                                <Insets right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                        <GridPane VBox.vgrow="ALWAYS">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="23.0" vgrow="ALWAYS" />
+                                                <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                                            </rowConstraints>
+                                            <children>
+                                                <GridPane fx:id="tableResumen" prefHeight="79.0" prefWidth="570.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="290.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="290.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="140.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="130.0" prefWidth="290.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="290.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Todos los proveedores">
+                                                            <GridPane.margin>
+                                                                <Insets left="10.0" />
+                                                            </GridPane.margin>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:" GridPane.columnIndex="4">
+                                                            <GridPane.margin>
+                                                                <Insets left="10.0" />
+                                                            </GridPane.margin>
+                                                        </Text>
+                                                        <Label fx:id="labelBalance" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                                            <padding>
+                                                                <Insets left="10.0" />
+                                                            </padding>
+                                                        </Label>
+                                          <Label fx:id="labelRegistros" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                                    </children>
+                                                </GridPane>
+                                                <TableView fx:id="tableCuentasCorrientes" onMouseClicked="#getItem" prefHeight="555.0" prefWidth="580.0" GridPane.rowIndex="1">
+                                                    <columns>
+                                                        <TableColumn fx:id="tableCProveedor" prefWidth="84.0" text="Proveedor" />
+                                                        <TableColumn fx:id="tableCFecha" prefWidth="75.0" text="Fecha" />
+                                                        <TableColumn fx:id="tableCMonto" prefWidth="152.0" text="Monto" />
+                                          <TableColumn fx:id="tableCEstaPagado" prefWidth="75.0" text="Esta Pagado" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </GridPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox fx:id="informacionMovimiento" alignment="CENTER" maxWidth="-Infinity" prefWidth="400.0" style="-fx-background-color: #ff7c00;" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label fx:id="visualizacionMovimiento" />
+                            </children></VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

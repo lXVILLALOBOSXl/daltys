@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daltysfood.controller.DashboardController">
+    <top>
+        <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu fx:id="menuRestauranteDashboard" mnemonicParsing="false" text="Restaurante">
+                    <items>
+                        <Menu fx:id="menuMesas" mnemonicParsing="false" text="Mesas">
+                            <items>
+                        <MenuItem fx:id="menuRestaurante" mnemonicParsing="false" onAction="#mostrarRestaurante" text="Restaurante" />
+                                <MenuItem fx:id="menuTerrazaRestaurante" mnemonicParsing="false" onAction="#mostrarTerrazaRestaurante" text="Terraza" />
+                            </items>
+                        </Menu>
+                  <Menu fx:id="pedidosMostrador" mnemonicParsing="false" text="Pedidos">
+                    <items>
+                      <MenuItem fx:id="pedidosPendientes" mnemonicParsing="false" onAction="#mostrarPedidosPendientes" text="Pendientes" />
+                        <MenuItem fx:id="pedidosEnCurso" mnemonicParsing="false" onAction="#mostrarPedidosEnCurso" text="En curso" />
+                        <MenuItem fx:id="pedidosCerrados" mnemonicParsing="false" onAction="#mostrarPedidosCerrados" text="Cerrados" />
+                    </items>
+                  </Menu>
+                    </items>
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/DaltysLogo.png" />
+                            </image></ImageView>
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuVentasDashboard" mnemonicParsing="false" text="Ventas">
+                    <items>
+                        <MenuItem fx:id="menuVentas" mnemonicParsing="false" onAction="#mostrarVentas" text="Ventas" />
+                        <MenuItem fx:id="menuMovimientosDeCaja" mnemonicParsing="false" onAction="#mostrarMovimientosDeCaja" text="Movimientos de Caja" />
+                        <MenuItem fx:id="menuArqueoDeCaja" mnemonicParsing="false" onAction="#mostrarArqueoDeCaja" text="Arqueo de Caja" />
+                        <MenuItem fx:id="menuPropinas" mnemonicParsing="false" onAction="#mostrarPropinas" text="Propinas" />
+                    </items>
+               <graphic>
+                  <FontIcon iconColor="#ff7c00" iconLiteral="fa-money" iconSize="20" />
+               </graphic>
+                </Menu>
+                <Menu fx:id="menuGastosDashboard" mnemonicParsing="false" text="Gastos">
+                    <items>
+                        <MenuItem fx:id="menuGastos" mnemonicParsing="false" onAction="#mostrarGastos" text="Gastos" />
+                        <MenuItem fx:id="menuCategoriaDeGastos" mnemonicParsing="false" onAction="#mostrarCategoriaDeGastos" text="Categoria de Gastos" />
+                    </items>
+                    <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-bar-chart-o" iconSize="20" />
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuProductosDashboard" mnemonicParsing="false" text="Productos">
+                    <items>
+                        <MenuItem fx:id="menuProductos" mnemonicParsing="false" onAction="#mostarProductos" text="Productos" />
+                        <MenuItem fx:id="menuCategoriaDeProductos" mnemonicParsing="false" onAction="#mostarCategoriaDeProductos" text="Categoria de Productos" />
+                        <MenuItem fx:id="menuControlDeStock" mnemonicParsing="false" onAction="#mostrarControlDeStock" text="Control de Stock" />
+                        <MenuItem fx:id="menuMovimientosDeStock" mnemonicParsing="false" onAction="#mostrarMovimientosDeStock" text="Movimientos de Stock" />
+                        <MenuItem fx:id="menuListasDePrecios" mnemonicParsing="false" onAction="#mostrarListasDePrecios" text="Listas de Precios" />
+                    </items>
+                    <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-cutlery" iconSize="20" />
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuProveedoresDashboard" mnemonicParsing="false" text="Proveedores">
+                    <items>
+                        <MenuItem fx:id="menuProveedores" mnemonicParsing="false" onAction="#mostrarProveedores" text="Proveedores" />
+                        <MenuItem fx:id="menuCuentasCorrientes" mnemonicParsing="false" onAction="#mostrarCuentasCorrientes" text="Cuentas Corrientes" />
+                    </items>
+                    <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-truck" iconSize="20" />
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuReportesDashboard" mnemonicParsing="false" text="Reportes">
+               <items>
+                  <MenuItem fx:id="menuReportes" mnemonicParsing="false" onAction="#mostrarReportes" text="Reportes" />
+               </items>
+               <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-line-chart" iconSize="20" />
+               </graphic>
+                </Menu>
+                <Menu fx:id="menuConfiguracion" mnemonicParsing="false" text="Configuracion">
+                    <items>
+                        <MenuItem fx:id="menuConfiguracionGeneral" mnemonicParsing="false" onAction="#mostrarConfiguracionGeneral" text="Configuracion general" />
+                    </items>
+                    <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-gear" iconSize="20" />
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuCuentaDashboard" mnemonicParsing="false" text="Cuenta">
+                    <items>
+                        <MenuItem fx:id="menuCuenta" mnemonicParsing="false" onAction="#mostrarCuenta" text="Mi Cuenta" />
+                        <MenuItem fx:id="menuSalir" mnemonicParsing="false" onAction="#salir" text="Salir" />
+                    </items>
+                    <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-user" iconSize="20" />
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuNotificaciones" mnemonicParsing="false" text="Notificaciones">
+                    <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-envelope" iconSize="20" />
+                    </graphic>
+                </Menu>
+                <Menu fx:id="menuAyuda" mnemonicParsing="false" text="Ayuda">
+                    <items>
+                        <MenuItem fx:id="menuTutoriales" mnemonicParsing="false" onAction="#mostrarTutoriales" text="Tutoriales" />
+                        <MenuItem fx:id="menuContacto" mnemonicParsing="false" onAction="#mostrarContacto" text="Ponte en Contacto" />
+                    </items>
+                    <graphic>
+                        <FontIcon iconColor="#ff7c00" iconLiteral="fa-question-circle" iconSize="20" />
+                    </graphic>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <center>
+      <JFXTabPane fx:id="tabPane" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

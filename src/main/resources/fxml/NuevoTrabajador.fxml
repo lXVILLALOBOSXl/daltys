@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="580.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.daltysfood.controller.NuevoTrabajadorController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff7c00" height="100.0" layoutX="20.0" stroke="WHITE" strokeType="INSIDE" width="359.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <FontIcon fill="WHITE" iconLiteral="fa-tags" iconSize="30" layoutX="14.0" layoutY="60.0" />
+        <Text fill="WHITE" layoutX="55.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo Trabajador">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Text>
+        <GridPane hgap="10.0" layoutX="80.0" layoutY="114.0" prefHeight="395.0" prefWidth="249.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="114.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <JFXButton onAction="#guardar" style="-fx-background-color: #ff7c00;" text="Guardar" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="10">
+                    <graphic>
+                        <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="fa-save" iconSize="25" />
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </JFXButton>
+            <HBox prefHeight="49.0" prefWidth="329.0">
+               <children>
+                  <Label text="Usuario*">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldUsuario" prefHeight="27.0" prefWidth="155.0">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="labelDominio">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="329.0" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Clave*">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldClave" prefHeight="27.0" prefWidth="288.0">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="329.0" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Reingresar clave* ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldClave2" prefHeight="27.0" prefWidth="223.0">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="329.0" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Rol* ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBoxRol" prefHeight="27.0" prefWidth="295.0">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="99.0" prefWidth="289.0" GridPane.rowIndex="5">
+               <children>
+                  <Label text="Nombre* ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldNombre" prefHeight="27.0" prefWidth="265.0">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="289.0" GridPane.rowIndex="6">
+               <children>
+                  <Label text="Apellido Paterno ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldApellidoPaterno" prefHeight="27.0" prefWidth="226.0">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="99.0" prefWidth="289.0" GridPane.rowIndex="7">
+               <children>
+                  <Label text="Apellido Materno ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldApellidoMaterno" prefHeight="27.0" prefWidth="223.0">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="0.0" prefWidth="289.0" GridPane.rowIndex="8">
+               <children>
+                  <Label text="Telefono ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldTelefono" prefHeight="27.0" prefWidth="264.0">
+                     <HBox.margin>
+                        <Insets left="3.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="49.0" prefWidth="329.0" GridPane.rowIndex="4">
+               <children>
+                  <Label text="Turno* ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBoxTurno" prefHeight="27.0" prefWidth="274.0">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+            </HBox>
+            <CheckBox fx:id="checkBoxEstaActivo" mnemonicParsing="false" text="Esta activo" GridPane.rowIndex="9" />
+            </children>
+        </GridPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" />
+    </padding>
+</AnchorPane>
